@@ -9,6 +9,7 @@ import { Input } from "~/components/ui/input";
 import { Navigation } from "~/components/navigation";
 import { Search } from "~/components/search";
 import { Properties } from "./properties";
+import { Separator } from "~/components/ui/separator";
 
 export default async function Home() {
   return (
@@ -37,13 +38,24 @@ export default async function Home() {
             <div className="flex items-center justify-between">
               <span className="flex gap-1 text-zinc-500">
                 We have found
-                <p className="font-bold text-black">5 properties </p>that
-                match your criteria
+                <p className="font-bold text-black">5 properties </p>that match
+                your criteria
               </span>
-              <Button className="flex gap-2 bg-white text-black shadow hover:bg-white hover:shadow-lg">
-                <Image src="/filter.svg" alt="Filter" width={16} height={16} />
-                Advanced filtering
-              </Button>
+              <div className="flex h-10 space-x-2">
+                <Button className="flex gap-2 bg-white text-black shadow hover:bg-white hover:shadow-lg">
+                  <Image
+                    src="/filter.svg"
+                    alt="Filter"
+                    width={16}
+                    height={16}
+                  />
+                  Advanced filtering
+                </Button>
+                <Separator orientation="vertical" />
+                <Button className="flex gap-2 bg-white p-2 text-black shadow hover:bg-white hover:shadow-lg">
+                  <Image src="/map.svg" alt="Map" width={28} height={28} />
+                </Button>
+              </div>
             </div>
 
             <Properties />
