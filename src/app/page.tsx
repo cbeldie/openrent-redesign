@@ -37,7 +37,7 @@ export default async function Home() {
             <div className="flex items-center justify-between">
               <span className="flex gap-1 text-zinc-500">
                 We have found
-                <p className="font-bold text-black">100 properties </p>that
+                <p className="font-bold text-black">5 properties </p>that
                 match your criteria
               </span>
               <Button className="flex gap-2 bg-white text-black shadow hover:bg-white hover:shadow-lg">

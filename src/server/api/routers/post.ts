@@ -7,6 +7,7 @@ interface Properties {
   bedrooms: number;
   baths: number;
   furnished: boolean;
+  distance: number;
   images: string[];
 }
 
@@ -16,6 +17,7 @@ const properties: Properties[] = [
     rent: 1500,
     bedrooms: 3,
     baths: 2,
+    distance: 0.68,
     furnished: true,
     images: ["/apartment1-1.jpg", "/apartment1-2.jpg", "/apartment1-3.jpg"],
   },
@@ -24,6 +26,7 @@ const properties: Properties[] = [
     rent: 850,
     bedrooms: 1,
     baths: 1,
+    distance: 1.2,
     furnished: false,
     images: ["/studio1-1.jpg", "/studio1-2.jpg", "/studio1-3.jpg"],
   },
@@ -32,6 +35,7 @@ const properties: Properties[] = [
     rent: 2200,
     bedrooms: 4,
     baths: 3,
+    distance: 3,
     furnished: true,
     images: ["/house1-1.jpg", "/house1-2.jpg", "/house1-3.jpg"],
   },
@@ -40,6 +44,7 @@ const properties: Properties[] = [
     rent: 1200,
     bedrooms: 2,
     baths: 1,
+    distance: 5.78,
     furnished: false,
     images: ["/flat1-1.jpg", "/flat1-2.jpg", "/flat1-3.jpg"],
   },
@@ -48,6 +53,7 @@ const properties: Properties[] = [
     rent: 1800,
     bedrooms: 2,
     baths: 2,
+    distance: 10,
     furnished: true,
     images: ["/loft1-1.jpg", "/loft1-2.jpg", "/loft1-3.jpg"],
   },

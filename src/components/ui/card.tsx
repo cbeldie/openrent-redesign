@@ -22,26 +22,28 @@ Card.displayName = "Card";
 
 const CardImage = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, children, ...props }, ref) => (
+  React.HTMLAttributes<HTMLDivElement> & { distance?: number }
+>(({ className, distance, children, ...props }, ref) => (
   <div
     ref={ref}
     className={cn("relative overflow-hidden", className)}
     {...props}
   >
     {children}
-    <div className="absolute left-3 top-3 rounded-full bg-white px-2 py-1 text-sm font-semibold text-zinc-800">
-      <span className="flex items-center">
-        <Image
-          src="/location.svg"
-          width={16}
-          height={16}
-          alt="Location"
-          className="hidden lg:block"
-        />
-        <p className="text-sm text-gray-600">1.8km</p>
-      </span>
-    </div>
+    {distance && (
+      <div className="absolute left-3 top-3 rounded-full bg-white px-2 py-1 text-sm font-semibold text-zinc-800">
+        <span className="flex items-center">
+          <Image
+            src="/location.svg"
+            width={16}
+            height={16}
+            alt="Location"
+            className="hidden lg:block"
+          />
+          <p className="text-sm text-gray-600">{distance}km</p>
+        </span>
+      </div>
+    )}
 
     <div className="group absolute right-3 top-3 rounded-full bg-white p-1 text-zinc-800">
       <svg

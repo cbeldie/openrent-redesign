@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Separator } from "~/components/ui/separator";
 import {
@@ -19,13 +20,51 @@ import {
 import { api } from "~/trpc/react";
 
 export function Properties() {
+  const [isLoading, setIsLoading] = useState(true);
   const [properties] = api.post.getProperties.useSuspenseQuery();
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="flex min-h-80 items-center justify-center">
+        <svg
+          className="h-12 w-12 animate-spin text-blue-500"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <circle
+            className="opacity-20"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            strokeWidth="4"
+          ></circle>
+          <circle
+            className="opacity-75"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            strokeWidth="4"
+            strokeDasharray="80"
+            strokeDashoffset="60"
+            strokeLinecap="round"
+          ></circle>
+        </svg>
+      </div>
+    );
+  }
 
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {properties.map((property, i) => (
         <Card key={i}>
-          <CardImage>
+          <CardImage distance={property.distance}>
             <Carousel>
               <CarouselContent>
                 {property.images.map((image, i) => (
