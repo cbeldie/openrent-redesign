@@ -1,4 +1,4 @@
-# OpenRent Interview Task
+# OpenRent Redesign
 
 Hello! Here's my alternative design to this page [https://www.openrent.co.uk/properties-to-rent/london?term=London].
 
