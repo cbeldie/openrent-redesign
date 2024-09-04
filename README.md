@@ -8,6 +8,7 @@ Some considerations:
 
 * I wanted to implement the map component as well to showcase what the would look like with this design but that would take a little longer to build.
 * Another different approach than the original design of the page that I wanted to go with was having the details of the property show up as a dialog/modal on click instead of navigating to a different page.
+* Another feature that I was going to implement was favouriting a property but thought it wasn't necessary to showcase the design.
 * Hope you enjoy those great AI generated photos of properties!
 
 ## How to run the project
