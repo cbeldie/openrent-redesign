@@ -1,4 +1,24 @@
-# Create T3 App
+# OpenRent Interview Task
+
+Hello! Here's my alternative design to this page [https://www.openrent.co.uk/properties-to-rent/london?term=London].
+
+There are some minor tweaks/ideas I had for the initial design but I wanted to try and imagine a completely different look than the original to showcase my ability. This design includes most of the features of the original page.
+
+Some considerations:
+
+* I wanted to implement the map component as well to showcase what the would look like with this design but that would take a little longer to build.
+* Another different approach than the original design of the page that I wanted to go with was having the details of the property show up as a dialog/modal on click instead of navigating to a different page.
+
+## How to run the project
+
+1. Clone the repository
+2. Run `npm install` to install the dependencies
+3. Run `npm run dev` to start the development server
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## ____________ T3 BOILERPLATE BELOW ____________
+
+## Create T3 App
 
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
 
